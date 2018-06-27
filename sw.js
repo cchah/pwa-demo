@@ -16,3 +16,19 @@ self.addEventListener('install', e => {
   )
 })
 
+
+
+self.addEventListener('activate', function(e) {
+	console.log('[demoPWA - ServiceWorker] Activate event fired.');
+	e.waitUntil(
+		caches.keys().then(function(keyList) {
+			return Promise.all(keyList.map(function(key) {
+				if (key !== cacheName) {
+					console.log('[demoPWA - ServiceWorker] Removing old cache...', key);
+					return caches.delete(key);
+				}
+			}));
+		})
+	);
+	return self.clients.claim();
+});
