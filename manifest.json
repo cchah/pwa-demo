@@ -29,18 +29,5 @@
     "src": "imgs/pwa.png",
     "sizes": "90x90",  // 以空格分隔的图片尺寸
     "type": "image/png"  // 帮助userAgent快速排除不支持的类型
-  },
-  {
-    "src": "icon/lowres",
-    "sizes": "48x48"
-  },
-  {
-    "src": "icon/hd_hi.ico",
-    "sizes": "72x72 96x96 128x128 256x256"
-  },
-  {
-    "src": "icon/hd_hi.svg",
-    "sizes": "72x72"
-  }
-  ]
+  }]
 }
