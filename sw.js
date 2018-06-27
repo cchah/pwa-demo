@@ -4,7 +4,7 @@ var cacheList = [
   '/',
   "index.html",
   "main.css",
-  "e.png"
+  "pwa.png"
 ];
 
 self.addEventListener('install', e => {
